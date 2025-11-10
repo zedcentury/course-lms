@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="lms_building.list">
+      <field name="name">lms_building list</field>
+      <field name="model">lms_building.lms_building</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="lms_building.action_window">
+      <field name="name">lms_building window</field>
+      <field name="res_model">lms_building.lms_building</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="lms_building.action_server">
+      <field name="name">lms_building server</field>
+      <field name="model_id" ref="model_lms_building_lms_building"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="lms_building" id="lms_building.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="lms_building.menu_1" parent="lms_building.menu_root"/>
+    <menuitem name="Menu 2" id="lms_building.menu_2" parent="lms_building.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="lms_building.menu_1_list" parent="lms_building.menu_1"
+              action="lms_building.action_window"/>
+    <menuitem name="Server to list" id="lms_building" parent="lms_building.menu_2"
+              action="lms_building.action_server"/>
+-->
+  </data>
+</odoo>
