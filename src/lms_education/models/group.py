@@ -10,3 +10,4 @@ class Group(models.Model):
 
     name = fields.Char(string="Name", required=True)
     course_id = fields.Many2one("le.course", string="Course", required=True)
+    student_ids = fields.One2many("le.group.student", "group_id", string="Students")
