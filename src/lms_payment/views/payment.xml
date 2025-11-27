@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="action_payment_top_up_balance" model="ir.actions.act_window">
+            <field name="name">Top Up Balance</field>
+            <field name="res_model">lp.payment</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[
+                ('detailed_type', '=', 'top_up_balance')
+            ]</field>
+        </record>
+    </data>
+</odoo>
