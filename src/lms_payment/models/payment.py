@@ -15,6 +15,8 @@ class Payment(models.Model):
     payment_date = fields.Date(string="Payment Date", default=fields.Date.today(), required=True)
     detailed_type = fields.Selection([
         ("top_up_balance", "Top Up Balance"),
+        ("refund", "Refund"),
+        ("expense", "Expense"),
     ], required=True)
     state = fields.Selection([
         ("draft", "Draft"),
@@ -23,3 +25,7 @@ class Payment(models.Model):
     ], default="draft", required=True)
 
     student_id = fields.Many2one("res.users", string="Student")
+    teacher_id = fields.Many2one("res.users", string="Teacher")
+
+    def action_confirm(self):
+        self.write({"state": "confirmed"})

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="payment_base_menu" name="Payments">
+            <menuitem id="menu_payment_top_up_balance" action="action_payment_top_up_balance" sequence="1"/>
+            <menuitem id="menu_payment_refund" action="action_payment_refund" sequence="2"/>
+        </menuitem>
+    </data>
+</odoo>
