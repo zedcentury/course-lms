@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="menu_teachers" action="action_teachers"/>
+        <menuitem id="menu_students" action="action_students"/>
+    </data>
+</odoo>
