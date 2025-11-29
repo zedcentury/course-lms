@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_partner_form" model="ir.ui.view">
+            <field name="name">view_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='email']" position="after">
+                    <field name="user_type"/>
+                </xpath>
+
+                <xpath expr="//notebook" position="inside">
+                    <page string="Extra Information" invisible="user_type != 'teacher'">
+                        <group>
+                            <group>
+                                <field name="experience_years"/>
+                                <field name="worked_places"/>
+                            </group>
+                            <group/>
+                        </group>
+                    </page>
+                    <page string="Extra Information" invisible="user_type != 'student'">
+                        <group>
+                            <group>
+                                <field name="student_number"/>
+                            </group>
+                            <group/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

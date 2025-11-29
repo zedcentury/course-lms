@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data>
+        <record id="view_users_form" model="ir.ui.view">
+            <field name="name">view_users_form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[1]" position="inside">
+                    <field name="user_type"/>
+                </xpath>
+            </field>
+        </record>
+
         <record id="action_teachers" model="ir.actions.act_window">
             <field name="name">Teachers</field>
             <field name="res_model">res.users</field>

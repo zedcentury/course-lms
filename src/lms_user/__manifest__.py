@@ -4,6 +4,7 @@
     'depends': ['base'],
     'data': [
         "views/res_users.xml",
+        "views/res_partner.xml",
         "views/menu_items.xml"
     ],
 }
