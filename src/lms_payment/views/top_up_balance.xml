@@ -41,10 +41,22 @@
             </field>
         </record>
 
+        <record id="top_up_balance_pivot" model="ir.ui.view">
+            <field name="name">top_up_balance_pivot</field>
+            <field name="model">lp.payment</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="payment_type" type="col"/>
+                    <field name="state" type="row"/>
+                    <field name="amount" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
         <record id="action_payment_top_up_balance" model="ir.actions.act_window">
             <field name="name">Top Up Balance</field>
             <field name="res_model">lp.payment</field>
-            <field name="view_mode">list,form</field>
+            <field name="view_mode">list,pivot,form</field>
             <field name="domain">[
                 ('detailed_type', '=', 'top_up_balance')
             ]</field>
